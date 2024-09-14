@@ -1,5 +1,12 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
+  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -11,7 +18,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+  height: 100%;
+}
+
 .favButton{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
   background-color: rgba(136, 136, 136, 0.116);
   padding: 10px;
   border: none;
@@ -19,8 +42,13 @@ code {
   cursor: pointer;
 }
 
+.favButton:hover{
+  background-color: #0358BE;
+}
+
 h1{
   text-align: center;
+  padding: 10px;
 }
 
 nav{
@@ -49,7 +77,6 @@ footer {
   bottom: 0;
   width: 90%;
   height: 40px;
-  margin-top: 2rem;
 }
 
 footer > img{
@@ -61,12 +88,11 @@ footer > p{
   padding-top: 0.7rem;
 }
 
-form{
+form {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   width: 300px;
-  height: 100px;
   margin: 0 auto;
 }
 
@@ -75,8 +101,9 @@ form{
   justify-content: space-around;
   flex-direction: column;
   align-items: center;
+  gap: .5rem;
   width: 200px;
-  padding: 0.5rem 0.5rem 0 0.5rem;
+  padding: 0.5rem;
   border: 0.5px solid rgb(136, 136, 136);
 }
 
@@ -95,12 +122,11 @@ form{
 }
 
 table {
- border-collapse: collapse;
-    border-spacing: 0;
-    width: 100%;
-    display: table;
-    border: 1px solid #ccc;
-
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  display: table;
+  border: 1px solid #ccc;
 }
 
 td, th {
@@ -118,5 +144,10 @@ tr:nth-child(even) {
   color: white;
 }
 .dark > a {
+  color: white;
+}
+
+.dark-nav, .dark-footer{
+  background-color: #1F2526;
   color: white;
 }

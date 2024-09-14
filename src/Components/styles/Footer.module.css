@@ -1,0 +1,28 @@
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo > img {
+  width: 200px;
+}
+
+.redes {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.redes > img {
+  width: 30px;
+  height: 30px;
+  filter: brightness(0) invert(0);
+}
